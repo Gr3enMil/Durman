@@ -1,0 +1,252 @@
+﻿.page {
+  min-height: 100vh;
+  background: #f2f2f3;
+  padding: 1.4rem 0 3rem;
+}
+
+.container {
+  width: min(1220px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.linkRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.86rem;
+}
+
+.backLink,
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 0.56rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.backLink {
+  border: 1px solid #dfc3bf;
+  color: #873128;
+  background: #fff;
+}
+
+.homeLink {
+  border: 1px solid #c63f31;
+  color: #fff;
+  background: #c63f31;
+}
+
+.backLink:hover {
+  border-color: #c84a3d;
+  color: #b4372a;
+  box-shadow: 0 8px 18px rgba(198, 63, 49, 0.14);
+}
+
+.homeLink:hover {
+  background: #b7372a;
+  border-color: #b7372a;
+  box-shadow: 0 8px 18px rgba(198, 63, 49, 0.22);
+}
+
+.heroMedia {
+  position: relative;
+  min-height: 17rem;
+  border-radius: 0.92rem;
+  overflow: hidden;
+  border: 1px solid #d8dde2;
+  box-shadow: 0 14px 26px rgba(14, 16, 20, 0.12);
+}
+
+.heroMedia::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 55%;
+  background: linear-gradient(180deg, rgba(10, 12, 14, 0) 0%, rgba(10, 12, 14, 0.38) 100%);
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroHeader {
+  margin-top: 0.95rem;
+  padding: 1rem 1rem 1.08rem;
+  border-radius: 0.82rem;
+  border: 1px solid #e2e4e8;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(13, 15, 18, 0.08);
+}
+
+.kicker {
+  margin: 0;
+  color: #c63f31;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.title {
+  margin: 0.4rem 0 0;
+  color: #14181e;
+  font-size: clamp(1.5rem, 4vw, 2.35rem);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 0.42rem 0 0;
+  color: #4f565f;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.contentSection {
+  padding-top: 1.2rem;
+}
+
+.infoGrid {
+  display: grid;
+  gap: 0.82rem;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e2e4e8;
+  border-radius: 0.84rem;
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(13, 15, 18, 0.06);
+}
+
+.panelTitle {
+  margin: 0;
+  color: #171c23;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+}
+
+.panelText {
+  margin: 0.58rem 0 0;
+  color: #4f565f;
+  font-size: 0.95rem;
+  line-height: 1.58;
+}
+
+.testimonialPanel {
+  border-color: #e8d0cc;
+  background: linear-gradient(180deg, #fff 0%, #fff6f4 100%);
+}
+
+.quote {
+  margin: 0.62rem 0 0;
+  color: #242a32;
+  font-size: 1rem;
+  line-height: 1.56;
+}
+
+.quoteAuthor {
+  margin: 0.62rem 0 0;
+  color: #5b626e;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mediaSection {
+  margin-top: 1.2rem;
+}
+
+.mediaTitle {
+  margin: 0;
+  color: #14181e;
+  font-size: 1.06rem;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+}
+
+.mediaGrid {
+  margin-top: 0.72rem;
+  display: grid;
+  gap: 0.76rem;
+}
+
+.mediaCard {
+  background: #fff;
+  border: 1px solid #e2e4e8;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(13, 15, 18, 0.06);
+}
+
+.mediaImageWrap {
+  position: relative;
+  min-height: 12rem;
+}
+
+.mediaImage {
+  object-fit: cover;
+}
+
+.mediaVideo {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: #0f1217;
+}
+
+@media (min-width: 48rem) {
+  .infoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonialPanel {
+    grid-column: 1 / -1;
+  }
+
+  .mediaGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 72rem) {
+  .container {
+    width: min(1220px, calc(100% - 3rem));
+  }
+
+  .page {
+    padding-top: 1.7rem;
+  }
+
+  .heroMedia {
+    min-height: 24rem;
+  }
+
+  .heroHeader {
+    margin-top: -1.9rem;
+    margin-left: 1.1rem;
+    max-width: min(42rem, calc(100% - 2.2rem));
+    position: relative;
+    z-index: 2;
+  }
+
+  .infoGrid {
+    gap: 0.95rem;
+  }
+
+  .mediaGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .mediaImageWrap {
+    min-height: 13.5rem;
+  }
+}

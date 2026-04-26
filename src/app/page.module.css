@@ -1,0 +1,765 @@
+﻿.page {
+  min-height: 100vh;
+  background: #f2f2f3;
+}
+
+.container {
+  width: min(1220px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #e4e5e7;
+  backdrop-filter: blur(8px);
+}
+
+.headerInner {
+  min-height: 4.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.logoLink {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.logoImage {
+  width: 9.8rem;
+  height: auto;
+}
+
+.desktopNav,
+.headerCta {
+  display: none;
+}
+
+.mobileMenu {
+  position: relative;
+}
+
+.mobileMenu summary {
+  list-style: none;
+  width: 2.58rem;
+  height: 2.58rem;
+  border-radius: 0.64rem;
+  border: 1px solid #dedee1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+.mobileMenu summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobileMenuIcon {
+  width: 1.32rem;
+  height: 1.32rem;
+  color: #14171d;
+}
+
+.mobilePanel {
+  position: absolute;
+  top: calc(100% + 0.56rem);
+  right: 0;
+  width: min(16.4rem, calc(100vw - 2rem));
+  border: 1px solid #dfe1e5;
+  border-radius: 0.86rem;
+  background: #fff;
+  padding: 0.72rem;
+  box-shadow: 0 18px 35px rgba(8, 10, 13, 0.16);
+}
+
+.mobileNavList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.34rem;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 0.52rem 0.64rem;
+  border-radius: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.mobileNavLink:hover {
+  background: #f8f1ef;
+  color: #c63f31;
+}
+
+.mobileCta {
+  margin-top: 0.76rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.56rem;
+  background: #c63f31;
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.74rem 0.9rem;
+}
+
+.mobileCta:hover {
+  background: #b7382b;
+}
+
+.main {
+  padding-bottom: 2.5rem;
+}
+
+.topSection {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.topMedia {
+  position: relative;
+  min-height: 25rem;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e6e8;
+}
+
+.topImage {
+  object-fit: cover;
+  object-position: 72% center;
+}
+
+.topShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(246, 246, 247, 0.97) 0%, rgba(246, 246, 247, 0.88) 31%, rgba(246, 246, 247, 0.12) 63%, rgba(246, 246, 247, 0) 76%);
+}
+
+.topContentWrap {
+  position: relative;
+  min-height: 25rem;
+  display: flex;
+  align-items: center;
+}
+
+.topContent {
+  width: min(35rem, 100%);
+  padding: 1.8rem 0;
+}
+
+.topTitle {
+  margin: 0;
+  color: #12151a;
+  font-size: clamp(2.25rem, 9vw, 5rem);
+  line-height: 1.01;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+.topAccent {
+  color: #c63f31;
+}
+
+.primaryCta {
+  margin-top: 1.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.66rem;
+  background: #c63f31;
+  color: #fff;
+  border-radius: 0.58rem;
+  padding: 0.9rem 1.18rem;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 12px 25px rgba(198, 63, 49, 0.24);
+}
+
+.primaryCta:hover {
+  background: #b7382b;
+}
+
+.ctaIcon {
+  width: 1.04rem;
+  height: 1.04rem;
+}
+
+.benefitsSection {
+  margin-top: -1.45rem;
+  position: relative;
+  z-index: 5;
+}
+
+.benefitsGrid {
+  background: #fff;
+  border: 1px solid #e4e5e8;
+  border-radius: 0.9rem;
+  box-shadow: 0 12px 28px rgba(13, 15, 19, 0.09);
+  overflow: hidden;
+  display: grid;
+}
+
+.benefitCard {
+  padding: 1rem 0.95rem;
+  border-bottom: 1px solid #ededee;
+  display: grid;
+  gap: 0.38rem;
+  justify-items: start;
+}
+
+.benefitCard:last-child {
+  border-bottom: 0;
+}
+
+.benefitIcon {
+  width: 1.95rem;
+  height: 1.95rem;
+  color: #c63f31;
+}
+
+.benefitTitle {
+  margin: 0;
+  color: #15191f;
+  font-size: 1.05rem;
+  line-height: 1.23;
+  letter-spacing: -0.012em;
+}
+
+.benefitText {
+  margin: 0;
+  color: #4f565f;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.section {
+  padding-top: 2.9rem;
+  scroll-margin-top: 5rem;
+}
+
+.sectionHead {
+  margin-bottom: 1.08rem;
+}
+
+.sectionCenter {
+  text-align: center;
+}
+
+.sectionLabel {
+  margin: 0;
+  color: #c63f31;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.sectionTitle {
+  margin: 0.3rem 0 0;
+  color: #13171d;
+  font-size: clamp(1.3rem, 2.7vw, 1.66rem);
+  line-height: 1.14;
+  letter-spacing: -0.023em;
+  font-weight: 800;
+}
+
+.servicesGrid {
+  display: grid;
+  gap: 0.78rem;
+}
+
+.serviceCard {
+  background: #fff;
+  border: 1px solid #e4e6e9;
+  border-radius: 0.86rem;
+  box-shadow: 0 8px 18px rgba(16, 17, 20, 0.05);
+  padding: 1.08rem 0.95rem;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.46rem;
+}
+
+.serviceIcon {
+  width: 2.05rem;
+  height: 2.05rem;
+  color: #c63f31;
+}
+
+.serviceTitle {
+  margin: 0;
+  color: #181c22;
+  font-size: 1.18rem;
+  line-height: 1.24;
+  letter-spacing: -0.014em;
+}
+
+.serviceText {
+  margin: 0;
+  max-width: 24ch;
+  color: #4f565f;
+  font-size: 0.95rem;
+  line-height: 1.48;
+}
+
+.aboutSection {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 3.3rem;
+  padding: 2.2rem 0;
+  border-top: 1px solid #e6e7ea;
+  border-bottom: 1px solid #e6e7ea;
+  overflow: hidden;
+  background: #f1f1f2;
+}
+
+.aboutBackground {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.aboutBgImage {
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.16;
+}
+
+.aboutBgShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(241, 241, 242, 0.99) 0%, rgba(241, 241, 242, 0.95) 62%, rgba(241, 241, 242, 0.8) 100%);
+}
+
+.aboutInner {
+  position: relative;
+}
+
+.aboutRow {
+  display: grid;
+  gap: 1rem;
+}
+
+.aboutIntro {
+  margin: 0;
+}
+
+.aboutLead {
+  margin: 0.56rem 0 0;
+  max-width: 54ch;
+  color: #4f565f;
+  font-size: 0.98rem;
+  line-height: 1.52;
+}
+
+.aboutValues {
+  margin-top: 0.2rem;
+  display: grid;
+  gap: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.aboutValue {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #d9dde3;
+  border-radius: 0;
+  padding: 0.9rem 0.1rem;
+  display: grid;
+  gap: 0.32rem;
+}
+
+.aboutValue:last-child {
+  border-bottom: 0;
+}
+
+.aboutValueTop {
+  display: grid;
+  justify-items: start;
+  gap: 0.34rem;
+}
+
+.aboutIcon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #c63f31;
+}
+
+.aboutValueTitle {
+  margin: 0;
+  color: #181c22;
+  font-size: 1rem;
+  line-height: 1.24;
+  letter-spacing: -0.012em;
+}
+
+.aboutValueText {
+  margin: 0;
+  color: #4f565f;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contactSection {
+  padding-top: 3rem;
+}
+
+.contactShell {
+  display: grid;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.contactInfo {
+  background: #fff;
+  border: 1px solid #e3e5e8;
+  border-radius: 0.78rem;
+  padding: 1.15rem;
+}
+
+.contactList {
+  margin: 1.05rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.86rem;
+}
+
+.contactItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.68rem;
+}
+
+.contactBadge {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c63f31;
+  box-shadow: 0 10px 18px rgba(198, 63, 49, 0.26);
+  flex-shrink: 0;
+}
+
+.contactIcon {
+  width: 1.03rem;
+  height: 1.03rem;
+  color: #fff;
+}
+
+.contactValue,
+.contactValueSmall {
+  margin: 0;
+  color: #171b21;
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.16;
+}
+
+.contactValueSmall {
+  font-size: 1.12rem;
+}
+
+.contactHint {
+  margin: 1.1rem 0 0;
+  color: #4f565f;
+  font-size: 0.92rem;
+}
+
+.contactFormCard {
+  background: #fff;
+  border: 1px solid #e3e5e8;
+  border-radius: 0.78rem;
+  box-shadow: 0 12px 24px rgba(15, 16, 20, 0.08);
+  padding: 1.15rem;
+}
+
+.footer {
+  margin-top: 2.45rem;
+  background: #252930;
+}
+
+.footerInner {
+  padding: 1.2rem 0;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footerBrand {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footerLogo {
+  width: 8.9rem;
+  height: auto;
+}
+
+.footerTag {
+  margin: 0;
+  color: #c7ced8;
+  font-size: 0.9rem;
+}
+
+.footerContact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.44rem;
+}
+
+.footerContact li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  color: #d8dde5;
+  font-size: 0.92rem;
+}
+
+.footerIcon {
+  width: 0.94rem;
+  height: 0.94rem;
+  color: #f1897d;
+}
+
+.footerLegal {
+  margin: 0;
+  color: #b4bdc8;
+  font-size: 0.88rem;
+}
+
+@media (min-width: 40rem) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .benefitCard {
+    border-right: 1px solid #ededee;
+  }
+
+  .benefitCard:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .benefitCard:nth-child(3),
+  .benefitCard:nth-child(4) {
+    border-bottom: 0;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aboutValues {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid #d9dde3;
+    border-bottom: 1px solid #d9dde3;
+  }
+
+  .aboutValue {
+    border-bottom: 0;
+    border-right: 1px solid #d9dde3;
+    padding: 0.9rem 0.6rem;
+  }
+
+  .aboutValue:last-child {
+    border-right: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .container {
+    width: min(1220px, calc(100% - 3rem));
+  }
+
+  .headerInner {
+    min-height: 5.2rem;
+    gap: 1.55rem;
+  }
+
+  .logoImage {
+    width: 11.3rem;
+  }
+
+  .desktopNav {
+    display: block;
+    margin-left: auto;
+  }
+
+  .desktopNavList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.95rem;
+  }
+
+  .navLink {
+    color: #31363d;
+    font-size: 0.97rem;
+    font-weight: 600;
+    display: inline-block;
+    padding-bottom: 0.18rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.16s ease, border-color 0.16s ease;
+  }
+
+  .navLink:hover {
+    color: #14171d;
+    border-color: #ce4b3e;
+  }
+
+  .navLinkActive {
+    color: #14171d;
+    border-color: #ce4b3e;
+  }
+
+  .headerCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #c63f31;
+    color: #fff;
+    border-radius: 0.48rem;
+    padding: 0.8rem 1.15rem;
+    font-size: 0.94rem;
+    font-weight: 700;
+    box-shadow: 0 9px 20px rgba(198, 63, 49, 0.22);
+  }
+
+  .headerCta:hover {
+    background: #b7382b;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .topMedia,
+  .topContentWrap {
+    min-height: 35rem;
+  }
+
+  .topImage {
+    object-position: center;
+  }
+
+  .topContent {
+    width: min(36rem, 46%);
+    padding: 3.4rem 0;
+  }
+
+  .primaryCta {
+    margin-top: 1.95rem;
+    min-width: 12.6rem;
+    justify-content: center;
+  }
+
+  .benefitsSection {
+    margin-top: -2rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .benefitCard {
+    border: 0;
+    border-right: 1px solid #ededee;
+    border-bottom: 0;
+    padding: 1.2rem 1rem;
+  }
+
+  .benefitCard:nth-child(2n) {
+    border-right: 1px solid #ededee;
+  }
+
+  .benefitCard:last-child {
+    border-right: 0;
+  }
+
+  .section {
+    padding-top: 3.9rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.95rem;
+  }
+
+  .serviceCard {
+    min-height: 12.2rem;
+  }
+
+  .aboutSection {
+    margin-top: 4rem;
+    padding: 2.8rem 0;
+  }
+
+  .aboutRow {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .aboutValues {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .aboutValue {
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 1px solid #d8dde3;
+    padding: 0.25rem 1rem;
+    min-height: 8rem;
+    align-content: start;
+  }
+
+  .aboutValue:last-child {
+    border-right: 0;
+  }
+
+  .aboutValueTop {
+    gap: 0.48rem;
+  }
+
+  .aboutValueText {
+    font-size: 0.92rem;
+  }
+
+  .contactShell {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.24fr);
+    gap: 1.1rem;
+  }
+
+  .contactInfo,
+  .contactFormCard {
+    padding: 1.22rem;
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1.2rem;
+  }
+}

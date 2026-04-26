@@ -1,0 +1,25 @@
+﻿<svg
+  width="330"
+  height="90"
+  viewBox="0 0 330 90"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="logoTitle logoDesc"
+>
+  <title id="logoTitle">Duris a syn</title>
+  <desc id="logoDesc">Logo společnosti Duris a syn</desc>
+  <path d="M18 28L65 8L112 28" stroke="#CF4C40" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M94 11V19" stroke="#CF4C40" stroke-width="6" stroke-linecap="round" />
+  <text
+    x="18"
+    y="66"
+    fill="#F1F4F8"
+    font-family="Manrope, 'Segoe UI', sans-serif"
+    font-size="24"
+    font-weight="800"
+    letter-spacing="-0.3"
+  >
+    Duris a syn
+  </text>
+</svg>

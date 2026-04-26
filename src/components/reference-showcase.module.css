@@ -1,0 +1,126 @@
+﻿.showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.card {
+  --grow: 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 14rem;
+  border: 1px solid #dfe2e6;
+  border-radius: 0.86rem;
+  overflow: hidden;
+  background: #1b1f24;
+  box-shadow: 0 8px 18px rgba(14, 16, 20, 0.09);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 12, 15, 0.06) 34%, rgba(10, 12, 15, 0.64) 100%);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.014em;
+}
+
+.location {
+  margin: 0.3rem 0 0;
+  color: rgba(246, 249, 252, 0.92);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.text {
+  margin: 0.44rem 0 0;
+  max-width: 45ch;
+  color: rgba(243, 246, 250, 0.95);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.cardActive {
+  border: 2px solid #cc4a3d;
+  box-shadow: 0 12px 24px rgba(204, 74, 61, 0.24);
+}
+
+.cardActive .scrim,
+.cardActive .content {
+  opacity: 1;
+}
+
+.cardActive .content {
+  transform: translateY(0);
+}
+
+.card:focus-visible {
+  outline: 3px solid rgba(204, 74, 61, 0.35);
+  outline-offset: 2px;
+}
+
+@media (max-width: 63.999rem) {
+  .card {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (min-width: 64rem) {
+  .showcase {
+    display: flex;
+    gap: 0.82rem;
+    height: 20.5rem;
+  }
+
+  .card {
+    flex: var(--grow) 1 0%;
+    min-height: 100%;
+    transition: flex 0.3s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:not(.cardActive) .scrim {
+    opacity: 0;
+  }
+
+  .card:not(.cardActive) .content {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .cardActive .title {
+    font-size: 1.35rem;
+  }
+
+  .cardActive .text {
+    font-size: 0.98rem;
+    line-height: 1.52;
+  }
+}
