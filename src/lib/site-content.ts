@@ -13,17 +13,19 @@
   | "mail";
 
 export const SITE = {
-  name: "Duris a syn",
-  legalName: "Duris a syn",
-  tagline: "Střechy, na které je spoleh.",
+  name: "D&D Pokrývačství",
+  legalName: "D&D Pokrývačství",
+  tagline: "Svěřte svou střechu do rukou profesionálů",
   description:
-    "Kompletní pokrývačské a klempířské práce v Praze a Středočeském kraji. Nové střechy, rekonstrukce, opravy a servis.",
-  phone: "+420 777 123 456",
-  phoneHref: "tel:+420777123456",
-  email: "info@durisasyn.cz",
-  emailHref: "mailto:info@durisasyn.cz",
-  location: "Praha a okolí",
-  serviceArea: "Praha a Středočeský kraj",
+    "Kompletní pokrývačské a klempířské práce v Karlovarském kraji. Nové střechy, rekonstrukce, opravy a servis.",
+  phone: "+420 739 276 897",
+  phoneHref: "tel:+420739276897",
+  secondaryPhone: "+420 604 866 731",
+  secondaryPhoneHref: "tel:+420604866731",
+  email: "tom.duris@email.cz",
+  emailHref: "mailto:tom.duris@email.cz",
+  location: "Karlovarský kraj",
+  serviceArea: "Karlovarský kraj",
   copyrightYear: "2026",
 } as const;
 
@@ -45,23 +47,23 @@ export const HERO_BENEFITS: ReadonlyArray<{
 }> = [
   {
     icon: "shield",
-    title: "15+ let praxe",
-    text: "Zkušenosti, na které se můžete spolehnout.",
+    title: "Zkušenosti z praxe",
+    text: "Přes 20 let zkušeností s pokrývačskými a klempířskými prácemi na novostavbách i rekonstrukcích.",
   },
   {
     icon: "roof",
-    title: "Kompletní pokrývačské práce",
-    text: "Od návrhu po finální realizaci.",
+    title: "Kvalitní materiály",
+    text: "Používáme certifikované materiály od renomovaných výrobců pro maximální životnost Vaší střechy.",
   },
   {
     icon: "clock",
-    title: "Rychlá realizace",
-    text: "Dodržujeme termíny a domluvu.",
+    title: "Férový přístup",
+    text: "Ke každé zakázce přistupujeme individuálně a vždy hledáme nejlepší řešení pro zákazníka.",
   },
   {
     icon: "mapPin",
-    title: "Působnost Praha a Středočeský kraj",
-    text: "Působíme v Praze a širokém okolí.",
+    title: "Spolehlivost a dodržování termínů",
+    text: "Pracujeme tak, aby vše proběhlo včas, bez zbytečných průtahů.",
   },
 ];
 
@@ -72,23 +74,23 @@ export const SERVICES: ReadonlyArray<{
 }> = [
   {
     icon: "house",
-    title: "Nové střechy",
-    text: "Navrhneme a zrealizujeme novou střechu na klíč.",
-  },
-  {
-    icon: "renovation",
-    title: "Rekonstrukce střech",
-    text: "Kompletní obnovy střech včetně výměny krytiny.",
-  },
-  {
-    icon: "wrench",
-    title: "Opravy a servis",
-    text: "Rychlé a spolehlivé opravy střech všech typů.",
+    title: "Pokrývačské práce",
+    text: "Nové střechy nebo rekonstrukce té stávající? Zajistíme kompletní řešení od návrhu po realizaci střechy.",
   },
   {
     icon: "gutter",
     title: "Klempířské práce",
-    text: "Oplechování střech, okapů a dalších detailů.",
+    text: "Vyrábíme klempířské prvky na míru pro maximální ochranu Vaší střechy.",
+  },
+  {
+    icon: "wrench",
+    title: "Opravy a servis",
+    text: "Zatéká Vám do střechy? Vyřešíme to rychle a profesionálně.",
+  },
+  {
+    icon: "renovation",
+    title: "Řešení havarijních stavů",
+    text: "Ohrožuje Vaše střecha zdraví nebo majetek? Postaráme se o rychlé a bezpečné řešení problému.",
   },
 ];
 
@@ -100,21 +102,16 @@ export const ABOUT_POINTS: ReadonlyArray<{
   {
     icon: "shield",
     title: "Poctivá práce",
-    text: "Děláme práci tak, aby vydržela.",
+    text: "",
   },
   {
     icon: "user",
-    title: "Osobní přístup",
-    text: "Ke každému zákazníkovi přistupujeme individuálně.",
+    title: "Ekologické postupy",
+    text: "",
   },
   {
     icon: "medal",
     title: "Kvalitní materiály",
-    text: "Používáme prověřené materiály od ověřených dodavatelů.",
-  },
-  {
-    icon: "mapPin",
-    title: "Praha a okolí",
-    text: "Působíme v Praze a širokém okolí.",
+    text: "",
   },
 ];

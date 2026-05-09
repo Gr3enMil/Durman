@@ -31,7 +31,7 @@
 }
 
 .logoImage {
-  width: 9.8rem;
+  width: 11.8rem;
   height: auto;
 }
 
@@ -213,7 +213,8 @@
   border-bottom: 1px solid #ededee;
   display: grid;
   gap: 0.38rem;
-  justify-items: start;
+  justify-items: center;
+  text-align: center;
 }
 
 .benefitCard:last-child {
@@ -221,8 +222,8 @@
 }
 
 .benefitIcon {
-  width: 1.95rem;
-  height: 1.95rem;
+  width: 2.34rem;
+  height: 2.34rem;
   color: #c63f31;
 }
 
@@ -290,8 +291,8 @@
 }
 
 .serviceIcon {
-  width: 2.05rem;
-  height: 2.05rem;
+  width: 2.46rem;
+  height: 2.46rem;
   color: #c63f31;
 }
 
@@ -387,13 +388,13 @@
 
 .aboutValueTop {
   display: grid;
-  justify-items: start;
+  justify-items: center;
   gap: 0.34rem;
 }
 
 .aboutIcon {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2.16rem;
+  height: 2.16rem;
   color: #c63f31;
 }
 
@@ -403,6 +404,7 @@
   font-size: 1rem;
   line-height: 1.24;
   letter-spacing: -0.012em;
+  text-align: center;
 }
 
 .aboutValueText {
@@ -472,6 +474,11 @@
   line-height: 1.16;
 }
 
+.contactValueSplit {
+  display: grid;
+  gap: 0.2rem;
+}
+
 .contactValueSmall {
   font-size: 1.12rem;
 }
@@ -508,7 +515,7 @@
 }
 
 .footerLogo {
-  width: 8.9rem;
+  width: 10.7rem;
   height: auto;
 }
 
@@ -516,6 +523,10 @@
   margin: 0;
   color: #c7ced8;
   font-size: 0.9rem;
+}
+
+.footerAccent {
+  color: #c63f31;
 }
 
 .footerContact {
@@ -538,6 +549,11 @@
   width: 0.94rem;
   height: 0.94rem;
   color: #f1897d;
+}
+
+.footerPhoneGroup {
+  display: inline-grid;
+  gap: 0.15rem;
 }
 
 .footerLegal {
@@ -596,7 +612,7 @@
   }
 
   .logoImage {
-    width: 11.3rem;
+    width: 13.6rem;
   }
 
   .desktopNav {
@@ -725,15 +741,18 @@
     border: 0;
     border-radius: 0;
     background: transparent;
+    align-items: stretch;
   }
 
   .aboutValue {
     border-top: 0;
     border-bottom: 0;
     border-right: 1px solid #d8dde3;
-    padding: 0.25rem 1rem;
-    min-height: 8rem;
-    align-content: start;
+    padding: 0.7rem 1rem;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .aboutValue:last-child {
@@ -741,6 +760,7 @@
   }
 
   .aboutValueTop {
+    align-content: center;
     gap: 0.48rem;
   }
 

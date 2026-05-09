@@ -55,12 +55,13 @@ const localBusinessSchema = {
   url: siteUrl,
   logo: `${siteUrl}${ASSETS.logo}`,
   image: `${siteUrl}${ASSETS.openGraphImage}`,
-  telephone: SITE.phone,
+  telephone: [SITE.phone, SITE.secondaryPhone],
   email: SITE.email,
   areaServed: SITE.serviceArea,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Praha",
+    addressLocality: "Karlovy Vary",
+    addressRegion: "Karlovarský kraj",
     addressCountry: "CZ",
   },
   serviceType: SERVICES.map((service) => service.title),
@@ -100,7 +101,7 @@ export default function Home() {
         <header className={styles.siteHeader}>
           <div className={`${styles.container} ${styles.headerInner}`}>
             <a className={styles.logoLink} href="#uvod" aria-label={`${SITE.name} - domovská stránka`}>
-              <Image src={ASSETS.logo} alt="Duris a syn" width={330} height={90} className={styles.logoImage} priority />
+              <Image src={ASSETS.logo} alt={SITE.name} width={330} height={90} className={styles.logoImage} priority />
             </a>
 
             <nav className={styles.desktopNav} aria-label="Hlavní navigace">
@@ -156,9 +157,9 @@ export default function Home() {
               <div className={`${styles.container} ${styles.topContentWrap}`}>
                 <div className={styles.topContent}>
                   <h1 className={styles.topTitle}>
-                    Střechy,
+                    Svěřte svou střechu
                     <br />
-                    na které je spoleh
+                    do rukou profesionálů
                     <span className={styles.topAccent}>.</span>
                   </h1>
                   <a className={styles.primaryCta} href="#kontakt-form">
@@ -232,10 +233,10 @@ export default function Home() {
               <div className={styles.aboutRow}>
                 <header className={`${styles.sectionHead} ${styles.aboutIntro}`}>
                   <p className={styles.sectionLabel}>O nás</p>
-                  <h2 className={styles.sectionTitle}>Poctivá práce od zkušeného týmu</h2>
+                  <h2 className={styles.sectionTitle}>D&amp;D Pokrývačství</h2>
                   <p className={styles.aboutLead}>
-                    Jsme rodinná firma s více než 15 lety zkušeností v oboru pokrývačství. Zakládáme na
-                    kvalitní práci, férovém jednání a dlouhodobé spokojenosti našich zákazníků.
+                    Spojení zkušeností, precizního řemesla a moderního přístupu ke střechám. Realizujeme
+                    střechy, které dlouhodobě chrání Váš domov.
                   </p>
                 </header>
 
@@ -249,7 +250,6 @@ export default function Home() {
                           <Icon className={styles.aboutIcon} />
                           <h3 className={styles.aboutValueTitle}>{point.title}</h3>
                         </div>
-                        <p className={styles.aboutValueText}>{point.text}</p>
                       </article>
                     );
                   })}
@@ -270,8 +270,9 @@ export default function Home() {
                       <span className={styles.contactBadge}>
                         <PhoneIcon className={styles.contactIcon} />
                       </span>
-                      <p className={styles.contactValue}>
+                      <p className={`${styles.contactValue} ${styles.contactValueSplit}`}>
                         <a href={SITE.phoneHref}>{SITE.phone}</a>
+                        <a href={SITE.secondaryPhoneHref}>{SITE.secondaryPhone}</a>
                       </p>
                     </li>
 
@@ -306,14 +307,20 @@ export default function Home() {
         <footer className={styles.footer}>
           <div className={`${styles.container} ${styles.footerInner}`}>
             <div className={styles.footerBrand}>
-              <Image src={ASSETS.logoLight} alt="Duris a syn" width={330} height={90} className={styles.footerLogo} />
-              <p className={styles.footerTag}>{SITE.tagline}</p>
+              <Image src={ASSETS.logoLight} alt={SITE.name} width={330} height={90} className={styles.footerLogo} />
+              <p className={styles.footerTag}>
+                {SITE.tagline}
+                <span className={styles.footerAccent}>.</span>
+              </p>
             </div>
 
             <ul className={styles.footerContact}>
               <li>
                 <PhoneIcon className={styles.footerIcon} />
-                <a href={SITE.phoneHref}>{SITE.phone}</a>
+                <span className={styles.footerPhoneGroup}>
+                  <a href={SITE.phoneHref}>{SITE.phone}</a>
+                  <a href={SITE.secondaryPhoneHref}>{SITE.secondaryPhone}</a>
+                </span>
               </li>
               <li>
                 <MailIcon className={styles.footerIcon} />
