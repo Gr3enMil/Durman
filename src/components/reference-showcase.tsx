@@ -54,7 +54,7 @@ export function ReferenceShowcase({ items }: ReferenceShowcaseProps) {
             <div className={styles.content}>
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.location}>{item.location}</p>
-              <p className={styles.text}>„{item.reference}“</p>
+              {item.reference.trim() ? <p className={styles.text}>„{item.reference}“</p> : null}
             </div>
           </Link>
         );

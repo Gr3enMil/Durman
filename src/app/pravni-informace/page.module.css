@@ -1,0 +1,111 @@
+.page {
+  min-height: 100vh;
+  background: #f2f2f3;
+  padding: 1.4rem 0 3rem;
+}
+
+.container {
+  width: min(980px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.actions {
+  margin-bottom: 0.7rem;
+}
+
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.45rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.58rem;
+  border: 1px solid #dfc3bf;
+  background: #fff;
+  color: #8b3128;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.homeLink:hover {
+  border-color: #c84a3d;
+  color: #b4372a;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.kicker {
+  margin: 0;
+  color: #c63f31;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.title {
+  margin: 0.35rem 0 0;
+  color: #14181e;
+  font-size: clamp(1.55rem, 4vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.lead {
+  margin: 0.65rem 0 0;
+  color: #4f565f;
+  max-width: 64ch;
+  line-height: 1.55;
+}
+
+.section {
+  margin-top: 0.95rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #161b21;
+  font-size: 1.04rem;
+  font-weight: 800;
+}
+
+.panel {
+  margin-top: 0.55rem;
+  background: #fff;
+  border: 1px solid #e2e4e8;
+  border-radius: 0.75rem;
+  padding: 0.95rem;
+  box-shadow: 0 8px 18px rgba(13, 15, 18, 0.06);
+  color: #2e3742;
+  font-size: 0.94rem;
+  line-height: 1.52;
+}
+
+.panel p {
+  margin: 0;
+}
+
+.panel p + p {
+  margin-top: 0.5rem;
+}
+
+.list {
+  margin: 0.55rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+@media (min-width: 72rem) {
+  .container {
+    width: min(980px, calc(100% - 3rem));
+  }
+
+  .page {
+    padding-top: 1.7rem;
+  }
+}
+

@@ -23,6 +23,7 @@ export function ContactForm() {
       phone: String(formData.get("phone") ?? "").trim(),
       email: String(formData.get("email") ?? "").trim(),
       message: String(formData.get("message") ?? "").trim(),
+      website: String(formData.get("website") ?? "").trim(),
     };
 
     setStatus("loading");
@@ -93,6 +94,11 @@ export function ContactForm() {
         placeholder="Napište nám, co potřebujete..."
         required
       />
+
+      <div className={styles.honeypot} aria-hidden="true">
+        <label htmlFor="website">Nevyplňujte toto pole</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
 
       <button className={styles.submit} type="submit" disabled={status === "loading"}>
         {status === "loading" ? "Odesílám..." : "Odeslat poptávku"}

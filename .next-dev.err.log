@@ -1,0 +1,111 @@
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="cs" className="plus_jakar...">
+                          <body>
+                            <OuterLayoutRouter>
+                            <CookieConsent>
++                             <div
++                               className="cookie-consent-module__lcFVZG__root"
++                               role="dialog"
++                               aria-modal="true"
++                               aria-labelledby="cookie-title"
++                             >
+-                             <script id="_R_">
+                  ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at CookieConsent (file://C:/Users/gr3en/Desktop/Durman/.next/dev/static/chunks/src_components_0ujdcvd._.js:231:216)
+    at RootLayout (src\app\layout.tsx:80:9)
+  78 |       <body>
+  79 |         {children}
+> 80 |         <CookieConsent />
+     |         ^
+  81 |       </body>
+  82 |     </html>
+  83 |   );
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="cs" className="plus_jakar...">
+                          <body>
+                            <OuterLayoutRouter>
+                            <CookieConsent>
++                             <div
++                               className="cookie-consent-module__lcFVZG__root"
++                               role="dialog"
++                               aria-modal="true"
++                               aria-labelledby="cookie-title"
++                             >
+-                             <script id="_R_">
+                  ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at div (<anonymous>)
+    at CookieConsent (file://C:/Users/gr3en/Desktop/Durman/.next/dev/static/chunks/src_components_0ujdcvd._.js:231:216)
+    at RootLayout (src\app\layout.tsx:80:9)
+  78 |       <body>
+  79 |         {children}
+> 80 |         <CookieConsent />
+     |         ^
+  81 |       </body>
+  82 |     </html>
+  83 |   );
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

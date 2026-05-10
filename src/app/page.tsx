@@ -1,5 +1,7 @@
 ﻿import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
+import Link from "next/link";
+import { CookieSettingsButton } from "@/components/cookie-settings-button";
 import { HeaderNav } from "@/components/header-nav";
 import { ReferenceShowcase } from "@/components/reference-showcase";
 import {
@@ -332,7 +334,19 @@ export default function Home() {
               </li>
             </ul>
 
-            <p className={styles.footerLegal}>© {SITE.copyrightYear} {SITE.legalName}. Všechna práva vyhrazena.</p>
+            <div className={styles.footerMeta}>
+              <ul className={`${styles.footerContact} ${styles.footerPolicy}`}>
+                <li>
+                  <Link className={styles.footerPolicyLink} href="/pravni-informace">
+                    Právní informace (GDPR a cookies)
+                  </Link>
+                </li>
+                <li>
+                  <CookieSettingsButton className={styles.footerPolicyButton} />
+                </li>
+              </ul>
+              <p className={styles.footerLegal}>© {SITE.copyrightYear} {SITE.legalName}. Všechna práva vyhrazena.</p>
+            </div>
           </div>
         </footer>
       </div>

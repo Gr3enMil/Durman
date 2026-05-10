@@ -50,6 +50,9 @@ export default async function ReferenceDetailPage({ params }: ReferenceDetailPag
     notFound();
   }
 
+  const hasTestimonial = Boolean(reference.testimonial.quote.trim() || reference.testimonial.author.trim());
+  const hasMedia = reference.media.length > 0;
+
   return (
     <main className={styles.page}>
       <section className={styles.heroSection}>
@@ -95,39 +98,43 @@ export default async function ReferenceDetailPage({ params }: ReferenceDetailPag
               <p className={styles.panelText}>{reference.solution}</p>
             </article>
 
-            <aside className={`${styles.panel} ${styles.testimonialPanel}`}>
-              <h2 className={styles.panelTitle}>Hodnocení zákazníka</h2>
-              <blockquote className={styles.quote}>„{reference.testimonial.quote}“</blockquote>
-              <p className={styles.quoteAuthor}>{reference.testimonial.author}</p>
-            </aside>
+            {hasTestimonial ? (
+              <aside className={`${styles.panel} ${styles.testimonialPanel}`}>
+                <h2 className={styles.panelTitle}>Výsledek realizace</h2>
+                <blockquote className={styles.quote}>„{reference.testimonial.quote}“</blockquote>
+                <p className={styles.quoteAuthor}>{reference.testimonial.author}</p>
+              </aside>
+            ) : null}
           </div>
 
-          <section className={styles.mediaSection}>
-            <h2 className={styles.mediaTitle}>Fotogalerie / video</h2>
+          {hasMedia ? (
+            <section className={styles.mediaSection}>
+              <h2 className={styles.mediaTitle}>Fotogalerie / video</h2>
 
-            <div className={styles.mediaGrid}>
-              {reference.media.map((item, index) => (
-                <article className={styles.mediaCard} key={`${reference.slug}-media-${index}`}>
-                  {item.type === "image" ? (
-                    <div className={styles.mediaImageWrap}>
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        className={styles.mediaImage}
-                        sizes="(min-width: 72rem) 33vw, 100vw"
-                      />
-                    </div>
-                  ) : (
-                    <video className={styles.mediaVideo} controls playsInline poster={item.poster}>
-                      <source src={item.src} />
-                      Váš prohlížeč nepodporuje přehrávání videa.
-                    </video>
-                  )}
-                </article>
-              ))}
-            </div>
-          </section>
+              <div className={styles.mediaGrid}>
+                {reference.media.map((item, index) => (
+                  <article className={styles.mediaCard} key={`${reference.slug}-media-${index}`}>
+                    {item.type === "image" ? (
+                      <div className={styles.mediaImageWrap}>
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          fill
+                          className={styles.mediaImage}
+                          sizes="(min-width: 72rem) 33vw, 100vw"
+                        />
+                      </div>
+                    ) : (
+                      <video className={styles.mediaVideo} controls playsInline poster={item.poster}>
+                        <source src={item.src} />
+                        Váš prohlížeč nepodporuje přehrávání videa.
+                      </video>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </section>
+          ) : null}
         </div>
       </section>
     </main>

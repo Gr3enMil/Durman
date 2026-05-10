@@ -1,0 +1,64 @@
+
+> durman@0.1.0 dev
+> next dev --port 3000
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.147.20.169:3000
+- Environments: .env
+✓ Ready in 725ms
+Creating turbopack project { dir: 'C:\\Users\\gr3en\\Desktop\\Durman', testMode: true }
+
+ GET / 200 in 772ms (next.js: 253ms, application-code: 519ms)
+ GET / 200 in 112ms (next.js: 6ms, application-code: 105ms)
+ GET /pravni-informace 200 in 502ms (next.js: 447ms, application-code: 54ms)
+ GET / 200 in 63ms (next.js: 4ms, application-code: 59ms)
+ GET /reference/rekonstrukce-strechy-pruhonice 200 in 721ms (next.js: 668ms, generate-params: 620ms, application-code: 53ms)
+ GET /reference 200 in 89ms (next.js: 51ms, application-code: 38ms)
+ GET / 200 in 58ms (next.js: 5ms, application-code: 52ms)
+✓ Compiled in 27ms
+ GET / 200 in 311ms (next.js: 171ms, application-code: 140ms)
+ GET / 200 in 59ms (next.js: 5ms, application-code: 54ms)
+ GET / 200 in 387ms (next.js: 152ms, application-code: 235ms)
+ GET / 200 in 114ms (next.js: 10ms, application-code: 103ms)
+ GET / 200 in 490ms (next.js: 107ms, application-code: 382ms)
+ GET / 200 in 317ms (next.js: 4ms, application-code: 313ms)
+ GET / 200 in 260ms (next.js: 55ms, application-code: 206ms)
+ GET / 200 in 261ms (next.js: 102ms, application-code: 160ms)
+ GET / 200 in 266ms (next.js: 8ms, application-code: 257ms)
+ GET / 200 in 113ms (next.js: 7ms, application-code: 106ms)
+✓ Compiled in 15ms
+ GET / 200 in 283ms (next.js: 123ms, application-code: 160ms)
+ GET / 200 in 71ms (next.js: 5ms, application-code: 66ms)
+ GET / 200 in 412ms (next.js: 4ms, application-code: 409ms)
+ GET /reference/asfaltove-pasy-karlovy-vary 200 in 183ms (next.js: 109ms, generate-params: 12ms, application-code: 74ms)
+✓ Compiled in 8ms
+ GET / 200 in 665ms (next.js: 157ms, application-code: 508ms)
+ GET / 200 in 395ms (next.js: 7ms, application-code: 388ms)
+ GET / 200 in 305ms (next.js: 150ms, application-code: 154ms)
+ GET / 200 in 308ms (next.js: 79ms, application-code: 229ms)
+ GET / 200 in 307ms (next.js: 215ms, application-code: 91ms)
+ GET / 200 in 313ms (next.js: 10ms, application-code: 303ms)
+✓ Compiled in 269ms
+ GET / 200 in 262ms (next.js: 149ms, application-code: 113ms)
+✓ Compiled in 22ms
+ GET / 200 in 360ms (next.js: 137ms, application-code: 223ms)
+ GET / 200 in 100ms (next.js: 6ms, application-code: 93ms)
+✓ Compiled in 36ms
+ GET / 200 in 878ms (next.js: 176ms, application-code: 702ms)
+ GET / 200 in 592ms (next.js: 5ms, application-code: 587ms)
+ GET / 200 in 421ms (next.js: 102ms, application-code: 319ms)
+ GET / 200 in 426ms (next.js: 13ms, application-code: 413ms)
+ GET / 200 in 425ms (next.js: 198ms, application-code: 228ms)
+ GET / 200 in 148ms (next.js: 14ms, application-code: 134ms)
+✓ Compiled in 26ms
+ GET / 200 in 938ms (next.js: 203ms, application-code: 735ms)
+ GET / 200 in 580ms (next.js: 9ms, application-code: 571ms)
+ GET / 200 in 465ms (next.js: 15ms, application-code: 451ms)
+ GET / 200 in 468ms (next.js: 129ms, application-code: 340ms)
+ GET / 200 in 465ms (next.js: 234ms, application-code: 231ms)
+ GET / 200 in 168ms (next.js: 17ms, application-code: 150ms)
+ GET / 200 in 825ms (next.js: 9ms, application-code: 815ms)
+ GET /pravni-informace 200 in 96ms (next.js: 40ms, application-code: 56ms)
+ GET / 200 in 66ms (next.js: 5ms, application-code: 61ms)
+ GET / 200 in 129ms (next.js: 3ms, application-code: 126ms)

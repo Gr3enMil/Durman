@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { ASSETS } from "@/lib/assets";
+import { CookieConsent } from "@/components/cookie-consent";
 import { SITE } from "@/lib/site-content";
 import "./globals.css";
 
@@ -74,7 +75,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs" className={plusJakartaSans.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }

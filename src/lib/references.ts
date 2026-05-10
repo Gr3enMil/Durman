@@ -32,108 +32,214 @@ export type ReferenceEntry = {
 
 const REFERENCE_DATA: ReadonlyArray<ReferenceEntry> = [
   {
-    slug: "rekonstrukce-strechy-pruhonice",
-    title: "Rekonstrukce střechy RD",
-    location: "Průhonice",
+    slug: "bytovy-dum-habartov",
+    title: "Bytový dům",
+    location: "Habartov",
     excerpt:
-      "Kompletní obnova střešního pláště včetně nové krytiny, oplechování a detailního napojení na stávající konstrukce.",
-    mainImage: ASSETS.referenceImages[0],
-    mainAlt: "Nově zrekonstruovaná střecha rodinného domu.",
+      "Rekonstrukce střechy bytového domu s původní asfaltovou šindelovou krytinou, která přestala plnit svou funkci.",
+    mainImage: ASSETS.referenceImages.bytovyDumHabartov[1],
+    mainAlt: "Bytový dům v Habartově po pokládce laminovaného šindele IKO Cambridge.",
     situation:
-      "Původní krytina po letech zatékala kolem komínového tělesa a vikýřů. Majitelé potřebovali rychlé řešení bez dlouhého omezení provozu domu.",
+      "Původní krytina z asfaltového šindele přestala plnit svou funkci. Součástí problému byl také poškozený hromosvod.",
     solution:
-      "Navrhli jsme kompletní výměnu krytiny, nové latování, úpravu odvětrání a klempířské detaily. Realizace proběhla ve třech etapách tak, aby dům zůstal plně obyvatelný.",
+      "Navrhli jsme kompletní odstranění původní krytiny, montáž podkladního pásu IKO Armourbase a následné pokrytí prémiovým laminovaným šindelem IKO Cambridge. Odvětrání střešního pláště bylo provedeno použitím IKO Armourvent, tedy větráním hřebenem.",
     testimonial: {
-      quote:
-        "Skvělá komunikace, čistá práce a hlavně přesně dodržený termín. S výsledkem jsme maximálně spokojeni.",
-      author: "Majitel domu, Průhonice",
+      quote: "",
+      author: "",
     },
     media: [
       {
         type: "image",
-        src: ASSETS.referenceImages[2],
-        alt: "Detail nové střešní krytiny po realizaci.",
+        src: ASSETS.referenceImages.bytovyDumHabartov[0],
+        alt: "Bytový dům v Habartově s původní šindelovou krytinou před rekonstrukcí.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.bytovyDumHabartov[1],
+        alt: "Bytový dům v Habartově po pokládce laminovaného šindele IKO Cambridge.",
       },
     ],
-    publishedAt: "2026-04-20",
+    publishedAt: "2026-05-10",
   },
   {
-    slug: "nova-strecha-praha-vychod",
-    title: "Nová střecha na novostavbě",
-    location: "Praha-východ",
+    slug: "rekonstrukce-strechy-krajkova",
+    title: "Rekonstrukce střechy",
+    location: "Krajková",
     excerpt:
-      "Realizace nové střechy na klíč od přípravy skladby až po finální montáž klempířských prvků.",
-    mainImage: ASSETS.referenceImages[1],
-    mainAlt: "Novostavba rodinného domu s novou střechou.",
+      "Rekonstrukce střechy s odstraněním dožilé tvrdé krytiny, doplněním DHV, novým laťováním, klempířskými prvky a protisněhovými zábranami.",
+    mainImage: ASSETS.referenceImages.rekonstrukceStrechyKrajkova[2],
+    mainAlt: "Rekonstrukce střechy v Krajkové po pokládce nové tvrdé krytiny.",
     situation:
-      "U novostavby bylo klíčové navrhnout střechu s důrazem na dlouhou životnost, bezproblémové odvodnění a čistý moderní vzhled.",
+      "Rekonstrukce střechy vyžadovala odstranění stávající tvrdé krytiny, která byla po své životnosti. Tašky se začaly rozpadat působením povětrnostních vlivů a pod krytinou nebyla instalována žádná doplňková hydroizolace.",
     solution:
-      "Navrhli jsme kompletní skladbu střechy, provedli pokládku krytiny a osadili odvodňovací systém. Důraz byl na přesné napojení detailů kolem komínu a střešních oken.",
+      "Navrhli jsme odstranění stávající krytiny, demontáž střešních latí a klempířských prvků. Střecha byla doplněna o střešní fólii (DHV), nové laťování, dostatečné odvětrání střešního pláště, nové žlaby a okapy, oplechování komínového tělesa včetně opláštění, pokládku nové tvrdé krytiny a instalaci protisněhových zábran.",
     testimonial: {
-      quote:
-        "Profesionální přístup od první schůzky až po předání. Vše proběhlo bez komplikací a v domluveném rozpočtu.",
-      author: "Investor stavby, Praha-východ",
+      quote: "",
+      author: "",
     },
     media: [
       {
         type: "image",
-        src: ASSETS.heroImage,
-        alt: "Průběh realizace střešních prací.",
+        src: ASSETS.referenceImages.rekonstrukceStrechyKrajkova[0],
+        alt: "Původní střecha v Krajkové před rekonstrukcí.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceStrechyKrajkova[1],
+        alt: "Původní tvrdá krytina před demontáží.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceStrechyKrajkova[2],
+        alt: "Rekonstrukce střechy v Krajkové po pokládce nové tvrdé krytiny.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceStrechyKrajkova[3],
+        alt: "Dokončená střecha s novou tvrdou krytinou a protisněhovými zábranami.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceStrechyKrajkova[4],
+        alt: "Letecký pohled na dokončenou rekonstrukci střechy v Krajkové.",
       },
     ],
-    publishedAt: "2026-04-18",
+    publishedAt: "2026-05-10",
   },
   {
-    slug: "oprava-krytiny-praha",
-    title: "Oprava krytiny a detailů",
-    location: "Praha",
+    slug: "rekonstrukce-rd-karlovy-vary",
+    title: "Rekonstrukce RD",
+    location: "Karlovy Vary",
     excerpt:
-      "Lokální oprava poškozené krytiny, revize oplechování a výměna kritických detailů s rizikem zatékání.",
-    mainImage: ASSETS.referenceImages[2],
-    mainAlt: "Detail tmavé taškové střechy po opravě.",
+      "Kompletní rekonstrukce rodinného domu s návrhem lehčí plechové krytiny, doplňkovou hydroizolační vrstvou, novým laťováním a klempířskými prvky.",
+    mainImage: ASSETS.referenceImages.rekonstrukceRdKarlovyVary[0],
+    mainAlt: "Rodinný dům v Karlových Varech po rekonstrukci střechy.",
     situation:
-      "Po silném větru došlo k uvolnění části krytiny a opakovanému zatékání do podkroví. Potřebný byl rychlý zásah a trvalé odstranění příčiny.",
+      "Kompletní rekonstrukce rodinného domu. Majitelé si nepřáli zatěžovat krov tvrdou krytinou a zároveň potřebovali přístavby a následný návrh střešního pláště.",
     solution:
-      "Vyměnili jsme poškozené části krytiny, opravili podkladní vrstvy a doplnili nové oplechování rizikových míst. Součástí byla i preventivní kontrola okolních ploch.",
+      "Navrhli jsme plechovou krytinu v imitaci střešních tašek s doplňkovou hydroizolační vrstvou a novým laťováním s dostatečným odvětráním střešního pláště. Součástí byl nový okapový systém a klempířské prvky. Přístavba byla zhotovena ve spolupráci s naším tesařem.",
     testimonial: {
-      quote:
-        "Přijeli opravdu rychle, vše nám vysvětlili a po opravě je střecha bez jediného problému.",
-      author: "Majitel objektu, Praha",
+      quote: "",
+      author: "",
     },
     media: [
       {
         type: "image",
-        src: ASSETS.referenceImages[3],
-        alt: "Okapový detail po servisním zásahu.",
+        src: ASSETS.referenceImages.rekonstrukceRdKarlovyVary[0],
+        alt: "Rodinný dům po rekonstrukci střechy s plechovou krytinou v imitaci tašek.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceRdKarlovyVary[1],
+        alt: "Pohled na dokončenou střechu rodinného domu v Karlových Varech.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceRdKarlovyVary[2],
+        alt: "Rodinný dům během kompletní rekonstrukce.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.rekonstrukceRdKarlovyVary[3],
+        alt: "Střešní plášť a přístavba během přípravy rekonstrukce.",
       },
     ],
-    publishedAt: "2026-04-15",
+    publishedAt: "2026-05-10",
   },
   {
-    slug: "klempirske-prace-ricany",
-    title: "Klempířské práce a okapy",
-    location: "Říčany",
+    slug: "asfaltove-pasy-karlovy-vary",
+    title: "Asfaltové pásy",
+    location: "Karlovy Vary",
     excerpt:
-      "Výměna stávajícího okapového systému, nové oplechování hran a detailní dopracování přechodů.",
-    mainImage: ASSETS.referenceImages[3],
-    mainAlt: "Detail nového okapu a oplechování.",
+      "Rekonstrukce ploché střechy se zatékáním a nedostatečným odtokem povrchové vody pomocí asfaltových pásů určených k natavení na stávající vrstvu.",
+    mainImage: ASSETS.referenceImages.asfaltovePasyKarlovyVary[1],
+    mainAlt: "Plochá střecha po rekonstrukci asfaltovými pásy.",
     situation:
-      "Původní systém odvodnění byl na hraně životnosti, s viditelnou korozí a netěsnostmi v napojeních.",
+      "Objekt postihovalo zatékání plochou střechou a zároveň nedostatečný odtok povrchové vody.",
     solution:
-      "Demontovali jsme staré prvky, osadili nový systém s vyšší odolností a sjednotili všechny klempířské detaily do jednoho funkčního celku.",
+      "K rekonstrukci byly použity speciální asfaltové pásy určené k natavení na stávající asfaltové pásy. Před natavením byl vyřešen systém odtékání povrchové vody zapuštěním vpustí níže, než byly původně vybudovány.",
     testimonial: {
-      quote:
-        "Precizně odvedená práce, čistota na stavbě a výborná domluva. Určitě doporučujeme dál.",
-      author: "Zákazník, Říčany",
+      quote: "",
+      author: "",
     },
     media: [
       {
         type: "image",
-        src: ASSETS.referenceImages[1],
-        alt: "Pohled na dům po dokončení klempířských prací.",
+        src: ASSETS.referenceImages.asfaltovePasyKarlovyVary[0],
+        alt: "Plochá střecha před rekonstrukcí s vodou na původním povrchu.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.asfaltovePasyKarlovyVary[1],
+        alt: "Plochá střecha po pokládce asfaltových pásů.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.asfaltovePasyKarlovyVary[2],
+        alt: "Dokončená plocha střechy po rekonstrukci asfaltovými pásy.",
       },
     ],
-    publishedAt: "2026-04-12",
+    publishedAt: "2026-05-10",
+  },
+  {
+    slug: "oprava-kominu-brezova",
+    title: "Oprava komínu",
+    location: "Březová",
+    excerpt:
+      "Komín v havarijním stavu s rizikem újmy na zdraví a majetku. Realizace zahrnovala odstranění komínového tělesa a návazné doplnění DHV.",
+    mainImage: ASSETS.referenceImages.opravaKominuBrezova[1],
+    mainAlt: "Střecha po opravě komínu a navazujících detailů v Březové.",
+    situation:
+      "Nepodceňujte komín v havarijním stavu. Zde hrozily újmy na zdraví a majetku.",
+    solution:
+      "Odstranění komínového tělesa, následné doplnění a napojení DHV a pokrytí tvrdou krytinou.",
+    testimonial: {
+      quote: "",
+      author: "",
+    },
+    media: [
+      {
+        type: "image",
+        src: ASSETS.referenceImages.opravaKominuBrezova[0],
+        alt: "Komín v havarijním stavu před odstraněním.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.opravaKominuBrezova[1],
+        alt: "Střecha po dokončení opravy komínu a navazujících detailů.",
+      },
+    ],
+    publishedAt: "2026-05-09",
+  },
+  {
+    slug: "dokonceni-strechy-karlovy-vary",
+    title: "Dokončení střechy",
+    location: "Karlovy Vary",
+    excerpt:
+      "Majitel zahájil realizaci svépomocí, ale finální pokrytí střechy nedokončil. Dokončili jsme práce včetně instalace krytiny Satjam Rapid.",
+    mainImage: ASSETS.referenceImages.dokonceniStrechyKarlovyVary[1],
+    mainAlt: "Dokončená střecha s krytinou Satjam Rapid v Karlových Varech.",
+    situation:
+      "Majitel se pustil sám do realizace své střechy, ale finální pokrytí své střechy nedokončil.",
+    solution:
+      "Dodělali jsme započatou práci a nainstalovali krytinu Satjam Rapid.",
+    testimonial: {
+      quote: "",
+      author: "",
+    },
+    media: [
+      {
+        type: "image",
+        src: ASSETS.referenceImages.dokonceniStrechyKarlovyVary[0],
+        alt: "Dokončovaná střecha s plechovou krytinou Satjam Rapid.",
+      },
+      {
+        type: "image",
+        src: ASSETS.referenceImages.dokonceniStrechyKarlovyVary[1],
+        alt: "Dokončená plechová střecha Satjam Rapid.",
+      },
+    ],
+    publishedAt: "2026-05-08",
   },
 ];
 
