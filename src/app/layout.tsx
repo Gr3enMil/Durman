@@ -22,16 +22,20 @@ export const metadata: Metadata = {
   description: SITE.description,
   keywords: [
     "pokrývačství Karlovarský kraj",
+    "střechy Karlovarský kraj",
     "rekonstrukce střech",
+    "rekonstrukce domu",
+    "tesařské práce",
+    "střešní klempířina",
+    "klempířství",
+    "izolace střech",
     "nové střechy",
     "klempířské práce",
     "opravy střech",
+    "havarijní opravy střech",
     "střecha na klíč",
     "D&D Pokrývačství",
   ],
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: `${SITE.name} | ${SITE.tagline}`,
+    title: `${SITE.name} | Pokrývačské a klempířské práce`,
     description: SITE.description,
     url: siteUrl,
     siteName: SITE.name,
@@ -61,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} | ${SITE.tagline}`,
+    title: `${SITE.name} | Pokrývačské a klempířské práce`,
     description: SITE.description,
     images: [ASSETS.openGraphImage],
   },
@@ -74,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className={plusJakartaSans.variable}>
+    <html lang="cs" className={plusJakartaSans.variable} data-scroll-behavior="smooth">
       <body>
         {children}
         <CookieConsent />

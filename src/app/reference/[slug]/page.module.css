@@ -187,6 +187,20 @@
   box-shadow: 0 8px 18px rgba(13, 15, 18, 0.06);
 }
 
+.mediaButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.mediaButton:focus-visible {
+  outline: 3px solid rgba(204, 74, 61, 0.35);
+  outline-offset: -3px;
+}
+
 .mediaImageWrap {
   position: relative;
   min-height: 12rem;
@@ -201,6 +215,81 @@
   display: block;
   aspect-ratio: 16 / 9;
   background: #0f1217;
+}
+
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(10, 12, 15, 0.84);
+}
+
+.lightboxFrame {
+  position: relative;
+  width: min(90vw, 96rem);
+  height: min(90vh, 96rem);
+  border-radius: 0.72rem;
+  overflow: hidden;
+  background: #0b0e12;
+  box-shadow: 0 28px 44px rgba(8, 10, 14, 0.45);
+}
+
+.lightboxImage {
+  object-fit: contain;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.78rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(232, 236, 240, 0.42);
+  background: rgba(13, 16, 22, 0.64);
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lightboxClose:hover {
+  background: rgba(13, 16, 22, 0.84);
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(232, 236, 240, 0.42);
+  border-radius: 50%;
+  background: rgba(13, 16, 22, 0.62);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.lightboxNav:hover {
+  background: rgba(13, 16, 22, 0.84);
+}
+
+.lightboxPrev {
+  left: 0.72rem;
+}
+
+.lightboxNext {
+  right: 0.72rem;
 }
 
 @media (min-width: 48rem) {

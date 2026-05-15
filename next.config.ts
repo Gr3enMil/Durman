@@ -22,6 +22,9 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   reactCompiler: true,
   poweredByHeader: false,
+  images: {
+    qualities: [75, 100],
+  },
   async headers() {
     return [
       {

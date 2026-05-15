@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllReferences, getReferenceBySlug } from "@/lib/references";
-import { SITE } from "@/lib/site-content";
+import { ReferenceMediaGallery } from "./reference-media-gallery";
 import styles from "./page.module.css";
 
 type ReferenceDetailPageProps = {
@@ -22,16 +22,20 @@ export async function generateMetadata({ params }: ReferenceDetailPageProps): Pr
 
   if (!reference) {
     return {
-      title: `Reference nenalezena | ${SITE.name}`,
+      title: "Reference nenalezena",
     };
   }
 
   return {
     title: `${reference.title} | ${reference.location}`,
     description: reference.excerpt,
+    alternates: {
+      canonical: `/reference/${reference.slug}`,
+    },
     openGraph: {
       title: `${reference.title} | ${reference.location}`,
       description: reference.excerpt,
+      url: `/reference/${reference.slug}`,
       images: [
         {
           url: reference.mainImage,
@@ -110,29 +114,7 @@ export default async function ReferenceDetailPage({ params }: ReferenceDetailPag
           {hasMedia ? (
             <section className={styles.mediaSection}>
               <h2 className={styles.mediaTitle}>Fotogalerie / video</h2>
-
-              <div className={styles.mediaGrid}>
-                {reference.media.map((item, index) => (
-                  <article className={styles.mediaCard} key={`${reference.slug}-media-${index}`}>
-                    {item.type === "image" ? (
-                      <div className={styles.mediaImageWrap}>
-                        <Image
-                          src={item.src}
-                          alt={item.alt}
-                          fill
-                          className={styles.mediaImage}
-                          sizes="(min-width: 72rem) 33vw, 100vw"
-                        />
-                      </div>
-                    ) : (
-                      <video className={styles.mediaVideo} controls playsInline poster={item.poster}>
-                        <source src={item.src} />
-                        Váš prohlížeč nepodporuje přehrávání videa.
-                      </video>
-                    )}
-                  </article>
-                ))}
-              </div>
+              <ReferenceMediaGallery media={reference.media} />
             </section>
           ) : null}
         </div>

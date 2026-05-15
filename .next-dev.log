@@ -62,3 +62,15 @@ Creating turbopack project { dir: 'C:\\Users\\gr3en\\Desktop\\Durman', testMode:
  GET /pravni-informace 200 in 96ms (next.js: 40ms, application-code: 56ms)
  GET / 200 in 66ms (next.js: 5ms, application-code: 61ms)
  GET / 200 in 129ms (next.js: 3ms, application-code: 126ms)
+✓ Compiled in 262ms
+✓ Compiled in 87ms
+ GET /reference 200 in 672ms (next.js: 259ms, application-code: 413ms)
+ GET /reference/bytovy-dum-habartov 200 in 566ms (next.js: 294ms, generate-params: 25ms, application-code: 273ms)
+✓ Compiled in 232ms
+✓ Compiled in 130ms
+ GET /reference/bytovy-dum-habartov 200 in 498ms (next.js: 204ms, generate-params: 11ms, application-code: 295ms)
+✓ Compiled in 617ms
+✓ Compiled in 13ms
+ GET /reference 200 in 340ms (next.js: 154ms, application-code: 186ms)
+ GET /reference/rekonstrukce-strechy-krajkova 200 in 308ms (next.js: 114ms, generate-params: 9ms, application-code: 194ms)
+✓ Compiled in 178ms

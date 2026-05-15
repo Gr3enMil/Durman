@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+﻿import type { Metadata } from "next";
+import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import Link from "next/link";
 import { CookieSettingsButton } from "@/components/cookie-settings-button";
@@ -49,6 +50,45 @@ const iconMap: Record<IconName, typeof ShieldIcon> = {
   mail: MailIcon,
 };
 
+const serviceAreas = [
+  { "@type": "AdministrativeArea", name: "Karlovarský kraj" },
+  { "@type": "City", name: "Karlovy Vary" },
+  { "@type": "City", name: "Sokolov" },
+  { "@type": "City", name: "Cheb" },
+  { "@type": "City", name: "Ostrov" },
+  { "@type": "City", name: "Chodov" },
+  { "@type": "City", name: "Mariánské Lázně" },
+] as const;
+
+const topicalFocus = [
+  "střechy",
+  "rekonstrukce střech",
+  "rekonstrukce domu",
+  "tesařské práce",
+  "střešní klempířina",
+  "klempířské práce",
+  "opravy střech",
+  "havarijní opravy střech",
+] as const;
+
+const serviceListItems = SERVICES.map((service, index) => ({
+  "@type": "ListItem",
+  position: index + 1,
+  item: {
+    "@type": "Service",
+    name: service.title,
+    description: service.text,
+    serviceType: service.title,
+    provider: {
+      "@type": "RoofingContractor",
+      name: SITE.name,
+      url: siteUrl,
+    },
+    areaServed: serviceAreas,
+    url: `${siteUrl}/#sluzby`,
+  },
+}));
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
@@ -59,14 +99,20 @@ const localBusinessSchema = {
   image: `${siteUrl}${ASSETS.openGraphImage}`,
   telephone: [SITE.phone, SITE.secondaryPhone],
   email: SITE.email,
-  areaServed: SITE.serviceArea,
+  areaServed: serviceAreas,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Karlovy Vary",
     addressRegion: "Karlovarský kraj",
     addressCountry: "CZ",
   },
+  knowsAbout: topicalFocus,
   serviceType: SERVICES.map((service) => service.title),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Katalog služeb",
+    itemListElement: serviceListItems,
+  },
 };
 
 const websiteSchema = {
@@ -77,6 +123,18 @@ const websiteSchema = {
   inLanguage: "cs-CZ",
 };
 
+const serviceCatalogSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Služby D&D Pokrývačství",
+  itemListElement: serviceListItems,
+};
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 export default function Home() {
   const aboutHighlights = ABOUT_POINTS.slice(0, 3);
   const latestReferences = getLatestReferences(4).map((item) => ({
@@ -97,6 +155,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceCatalogSchema) }}
       />
 
       <div className={styles.page}>
@@ -196,6 +258,17 @@ export default function Home() {
               <header className={`${styles.sectionHead} ${styles.sectionCenter}`}>
                 <p className={styles.sectionLabel}>Služby</p>
                 <h2 className={styles.sectionTitle}>Kompletní služby pro vaši střechu</h2>
+                <p className={styles.sectionLinks}>
+                  Podívejte se na{" "}
+                  <a className={styles.sectionLink} href="#reference">
+                    reference realizací
+                  </a>{" "}
+                  nebo rovnou pošlete{" "}
+                  <a className={styles.sectionLink} href="#kontakt-form">
+                    nezávaznou poptávku
+                  </a>
+                  .
+                </p>
               </header>
 
               <div className={styles.servicesGrid}>
@@ -219,6 +292,16 @@ export default function Home() {
               <header className={`${styles.sectionHead} ${styles.sectionCenter}`}>
                 <p className={styles.sectionLabel}>Reference</p>
                 <h2 className={styles.sectionTitle}>Vybrané realizace</h2>
+                <p className={styles.sectionLinks}>
+                  <Link className={styles.sectionLink} href="/reference">
+                    Zobrazit celý archiv realizací
+                  </Link>{" "}
+                  nebo{" "}
+                  <a className={styles.sectionLink} href="#kontakt-form">
+                    poptat podobnou realizaci
+                  </a>
+                  .
+                </p>
               </header>
 
               <ReferenceShowcase items={latestReferences} />
@@ -308,34 +391,37 @@ export default function Home() {
 
         <footer className={styles.footer}>
           <div className={`${styles.container} ${styles.footerInner}`}>
-            <div className={styles.footerBrand}>
-              <Image src={ASSETS.logoLight} alt={SITE.name} width={330} height={90} className={styles.footerLogo} />
-              <p className={styles.footerTag}>
-                {SITE.tagline}
-                <span className={styles.footerAccent}>.</span>
-              </p>
-            </div>
+            <div className={styles.footerInfoGroup}>
+              <div className={styles.footerBrand}>
+                <Image src={ASSETS.logoLight} alt={SITE.name} width={330} height={90} className={styles.footerLogo} />
+              </div>
 
-            <ul className={styles.footerContact}>
-              <li>
-                <PhoneIcon className={styles.footerIcon} />
-                <span className={styles.footerPhoneGroup}>
-                  <a href={SITE.phoneHref}>{SITE.phone}</a>
-                  <a href={SITE.secondaryPhoneHref}>{SITE.secondaryPhone}</a>
-                </span>
-              </li>
-              <li>
-                <MailIcon className={styles.footerIcon} />
-                <a href={SITE.emailHref}>{SITE.email}</a>
-              </li>
-              <li>
-                <MapPinIcon className={styles.footerIcon} />
-                {SITE.location}
-              </li>
-            </ul>
+              <ul className={styles.footerContact}>
+                <li>
+                  <PhoneIcon className={styles.footerIcon} />
+                  <span className={styles.footerPhoneGroup}>
+                    <a href={SITE.phoneHref}>{SITE.phone}</a>
+                    <a href={SITE.secondaryPhoneHref}>{SITE.secondaryPhone}</a>
+                  </span>
+                </li>
+                <li>
+                  <MailIcon className={styles.footerIcon} />
+                  <a href={SITE.emailHref}>{SITE.email}</a>
+                </li>
+                <li>
+                  <MapPinIcon className={styles.footerIcon} />
+                  {SITE.location}
+                </li>
+              </ul>
+            </div>
 
             <div className={styles.footerMeta}>
               <ul className={`${styles.footerContact} ${styles.footerPolicy}`}>
+                <li className={styles.footerQuickNav}>
+                  <a href="#sluzby">Služby</a>
+                  <a href="#reference">Reference</a>
+                  <a href="#kontakt">Kontakt</a>
+                </li>
                 <li>
                   <Link className={styles.footerPolicyLink} href="/pravni-informace">
                     Právní informace (GDPR a cookies)
@@ -353,3 +439,5 @@ export default function Home() {
     </>
   );
 }
+
+

@@ -91,6 +91,17 @@
   .card {
     aspect-ratio: 16 / 10;
   }
+
+  .card .scrim,
+  .card .content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .cardActive {
+    border: 1px solid #dfe2e6;
+    box-shadow: 0 8px 18px rgba(14, 16, 20, 0.09);
+  }
 }
 
 @media (min-width: 64rem) {
