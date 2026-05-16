@@ -1,7 +1,7 @@
 .form {
   position: relative;
   display: grid;
-  gap: 1rem;
+  gap: 0.3rem;
 }
 
 .row {

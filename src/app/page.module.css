@@ -827,7 +827,13 @@
 
   .contactInfo,
   .contactFormCard {
-    padding: 1.22rem;
+    padding: 1rem;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
   }
 
   .footerInner {
