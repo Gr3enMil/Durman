@@ -24,6 +24,8 @@ export const SITE = {
   secondaryPhoneHref: "tel:+420604866731",
   email: "tom.duris@email.cz",
   emailHref: "mailto:tom.duris@email.cz",
+  instagramLabel: "D&D pokrývačství",
+  instagramUrl: "https://www.instagram.com/tomasduris3/",
   location: "Karlovarský kraj",
   serviceArea: "Karlovarský kraj",
   copyrightYear: "2026",

@@ -1,0 +1,45 @@
+
+> durman@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+- Environments: .env
+✓ Ready in 970ms
+Creating turbopack project { dir: 'C:\\Users\\gr3en\\Desktop\\Durman', testMode: true }
+
+ GET / 200 in 1572ms (next.js: 480ms, application-code: 1092ms)
+ GET / 200 in 363ms (next.js: 14ms, application-code: 349ms)
+✓ Compiled in 115ms
+ GET / 200 in 854ms (next.js: 315ms, application-code: 540ms)
+ GET / 200 in 193ms (next.js: 13ms, application-code: 180ms)
+✓ Compiled in 133ms
+ GET / 200 in 625ms (next.js: 291ms, application-code: 334ms)
+ GET / 200 in 155ms (next.js: 12ms, application-code: 142ms)
+ GET / 200 in 959ms (next.js: 10ms, application-code: 949ms)
+✓ Compiled in 41ms
+✓ Compiled in 129ms
+ GET / 200 in 1176ms (next.js: 689ms, application-code: 487ms)
+ GET / 200 in 143ms (next.js: 11ms, application-code: 133ms)
+✓ Compiled in 46ms
+✓ Compiled in 133ms
+ GET / 200 in 809ms (next.js: 272ms, application-code: 536ms)
+ GET / 200 in 273ms (next.js: 12ms, application-code: 260ms)
+✓ Compiled in 45ms
+ GET / 200 in 721ms (next.js: 11ms, application-code: 710ms)
+✓ Compiled in 25ms
+ GET / 200 in 148ms (next.js: 6ms, application-code: 142ms)
+ GET / 200 in 121ms (next.js: 5ms, application-code: 117ms)
+✓ Compiled in 11ms
+ GET / 200 in 127ms (next.js: 6ms, application-code: 122ms)
+ GET / 200 in 122ms (next.js: 3ms, application-code: 118ms)
+✓ Compiled in 13ms
+ GET / 200 in 127ms (next.js: 4ms, application-code: 123ms)
+ GET / 200 in 135ms (next.js: 5ms, application-code: 130ms)
+ GET / 200 in 118ms (next.js: 4ms, application-code: 115ms)
+ GET / 200 in 125ms (next.js: 4ms, application-code: 121ms)
+ GET / 200 in 116ms (next.js: 5ms, application-code: 110ms)
+ GET / 200 in 127ms (next.js: 4ms, application-code: 124ms)
+ GET / 200 in 115ms (next.js: 3ms, application-code: 112ms)
+[?25h

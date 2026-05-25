@@ -10,6 +10,7 @@ import {
   ClockIcon,
   GutterIcon,
   HouseIcon,
+  InstagramIcon,
   MailIcon,
   MapPinIcon,
   MedalIcon,
@@ -99,6 +100,7 @@ const localBusinessSchema = {
   image: `${siteUrl}${ASSETS.openGraphImage}`,
   telephone: [SITE.phone, SITE.secondaryPhone],
   email: SITE.email,
+  sameAs: [SITE.instagramUrl],
   areaServed: serviceAreas,
   address: {
     "@type": "PostalAddress",
@@ -210,7 +212,7 @@ export default function Home() {
             <div className={styles.topMedia}>
               <Image
                 src={ASSETS.heroImage}
-                alt="Pokrývač při práci na střeše rodinného domu."
+                alt="Rekonstruovaná střecha rodinného domu s novou krytinou."
                 fill
                 className={styles.topImage}
                 priority
@@ -372,6 +374,17 @@ export default function Home() {
 
                     <li className={styles.contactItem}>
                       <span className={styles.contactBadge}>
+                        <InstagramIcon className={styles.contactIcon} />
+                      </span>
+                      <p className={styles.contactValue}>
+                        <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer">
+                          {SITE.instagramLabel}
+                        </a>
+                      </p>
+                    </li>
+
+                    <li className={styles.contactItem}>
+                      <span className={styles.contactBadge}>
                         <MapPinIcon className={styles.contactIcon} />
                       </span>
                       <p className={styles.contactValue}>{SITE.location}</p>
@@ -391,29 +404,45 @@ export default function Home() {
 
         <footer className={styles.footer}>
           <div className={`${styles.container} ${styles.footerInner}`}>
-            <div className={styles.footerInfoGroup}>
-              <div className={styles.footerBrand}>
-                <Image src={ASSETS.logoLight} alt={SITE.name} width={330} height={90} className={styles.footerLogo} />
+            <div className={styles.footerBrand}>
+              <div className={styles.footerBrandRow}>
+                <Image
+                  src={ASSETS.logoLightCompact}
+                  alt={SITE.name}
+                  width={208}
+                  height={90}
+                  className={styles.footerLogo}
+                />
+                <a
+                  className={styles.footerSocial}
+                  href={SITE.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${SITE.name} na Instagramu`}
+                  title={`${SITE.name} na Instagramu`}
+                >
+                  <InstagramIcon className={styles.footerSocialIcon} />
+                </a>
               </div>
-
-              <ul className={styles.footerContact}>
-                <li>
-                  <PhoneIcon className={styles.footerIcon} />
-                  <span className={styles.footerPhoneGroup}>
-                    <a href={SITE.phoneHref}>{SITE.phone}</a>
-                    <a href={SITE.secondaryPhoneHref}>{SITE.secondaryPhone}</a>
-                  </span>
-                </li>
-                <li>
-                  <MailIcon className={styles.footerIcon} />
-                  <a href={SITE.emailHref}>{SITE.email}</a>
-                </li>
-                <li>
-                  <MapPinIcon className={styles.footerIcon} />
-                  {SITE.location}
-                </li>
-              </ul>
             </div>
+
+            <ul className={styles.footerContact}>
+              <li>
+                <PhoneIcon className={styles.footerIcon} />
+                <span className={styles.footerPhoneGroup}>
+                  <a href={SITE.phoneHref}>{SITE.phone}</a>
+                  <a href={SITE.secondaryPhoneHref}>{SITE.secondaryPhone}</a>
+                </span>
+              </li>
+              <li>
+                <MailIcon className={styles.footerIcon} />
+                <a href={SITE.emailHref}>{SITE.email}</a>
+              </li>
+              <li>
+                <MapPinIcon className={styles.footerIcon} />
+                {SITE.location}
+              </li>
+            </ul>
 
             <div className={styles.footerMeta}>
               <ul className={`${styles.footerContact} ${styles.footerPolicy}`}>

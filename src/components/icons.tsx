@@ -140,3 +140,13 @@ export function MailIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function InstagramIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...baseProps} {...props}>
+      <rect x="4" y="4" width="16" height="16" rx="4.2" />
+      <circle cx="12" cy="12" r="3.35" />
+      <circle cx="16.8" cy="7.2" r="0.7" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}

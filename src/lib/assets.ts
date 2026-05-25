@@ -1,9 +1,10 @@
 ﻿export const ASSETS = {
   logo: "/assets/logo.svg",
   logoLight: "/assets/logo-light.svg",
-  heroImage: "/assets/images/hero-roof.jpg",
+  logoLightCompact: "/assets/logo-light-compact.svg",
+  heroImage: "/assets/images/hero-roof-reconstruction.webp",
   aboutImage: "/assets/images/about-bg.jpg",
-  openGraphImage: "/assets/images/hero-roof.jpg",
+  openGraphImage: "/assets/images/hero-roof-reconstruction.webp",
   referenceImages: {
     asfaltovePasyKarlovyVary: [
       "/assets/images/references/reference-1-1.webp",

@@ -1,0 +1,25 @@
+<svg
+  width="208"
+  height="90"
+  viewBox="0 0 208 90"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="logoTitle logoDesc"
+>
+  <title id="logoTitle">D&amp;D Pokrývačství</title>
+  <desc id="logoDesc">Logo společnosti D&amp;D Pokrývačství</desc>
+  <path d="M9 30L65 6L121 30" stroke="#CF4C40" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M100 10V20" stroke="#CF4C40" stroke-width="6" stroke-linecap="round" />
+  <text
+    x="18"
+    y="66"
+    fill="#F1F4F8"
+    font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif"
+    font-size="22"
+    font-weight="800"
+    letter-spacing="-0.2"
+  >
+    D&amp;D Pokrývačství
+  </text>
+</svg>
